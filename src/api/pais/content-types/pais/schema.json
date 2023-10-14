@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paises",
+  "info": {
+    "singularName": "pais",
+    "pluralName": "paises",
+    "displayName": "Pais",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "cervezas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cerveza.cerveza",
+      "mappedBy": "pais"
+    }
+  }
+}

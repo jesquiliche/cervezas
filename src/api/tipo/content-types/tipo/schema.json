@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos",
+  "info": {
+    "singularName": "tipo",
+    "pluralName": "tipos",
+    "displayName": "Tipo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "maxLength": 100,
+      "required": true
+    },
+    "cervezas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cerveza.cerveza",
+      "mappedBy": "tipo"
+    }
+  }
+}

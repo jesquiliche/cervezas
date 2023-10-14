@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "graduacions",
+  "info": {
+    "singularName": "graduacion",
+    "pluralName": "graduacions",
+    "displayName": "Graduación"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "cervezas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cerveza.cerveza",
+      "mappedBy": "graduacion"
+    }
+  }
+}

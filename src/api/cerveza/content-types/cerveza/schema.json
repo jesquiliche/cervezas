@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cervezas",
+  "info": {
+    "singularName": "cerveza",
+    "pluralName": "cervezas",
+    "displayName": "Cerveza",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "color": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::color.color",
+      "inversedBy": "cervezas"
+    },
+    "graduacion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::graduacion.graduacion",
+      "inversedBy": "cervezas"
+    },
+    "pais": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pais.pais",
+      "inversedBy": "cervezas"
+    },
+    "tipo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipo.tipo",
+      "inversedBy": "cervezas"
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "marca": {
+      "type": "string",
+      "required": true,
+      "maxLength": 150
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "envase": {
+      "type": "enumeration",
+      "enum": [
+        "Lata",
+        "Botella"
+      ]
+    },
+    "contenido": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "unidades": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    }
+  }
+}
