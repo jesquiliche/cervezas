@@ -726,6 +726,9 @@ export interface ApiCervezaCerveza extends Schema.CollectionType {
         maxLength: 50;
       }>;
     unidades: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<1>;
+    novedad: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

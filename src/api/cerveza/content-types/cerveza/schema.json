@@ -81,6 +81,11 @@
       "type": "integer",
       "required": true,
       "default": 1
+    },
+    "novedad": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
